@@ -1,0 +1,5 @@
+{
+  "name": "刮刮樂",
+  "description": "A Chinese New Year (Year of the Horse) themed scratchcard game with daily limits, local storage persistence, and admin configuration.",
+  "requestFramePermissions": []
+}

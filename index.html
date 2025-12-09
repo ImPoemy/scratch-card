@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>金馬迎春刮刮樂</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Noto Serif TC"', 'serif'],
+            },
+            colors: {
+              cny: {
+                red: '#8E0000',
+                gold: '#FFD700',
+                yellow: '#FFB800',
+                dark: '#2A0A0A',
+              }
+            },
+            backgroundImage: {
+              'pattern': "url('https://www.transparenttextures.com/patterns/binding-dark.png')",
+            },
+            animation: {
+              'bounce-in': 'bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+              'spin-slow': 'spin 3s linear infinite',
+            },
+            keyframes: {
+              'bounce-in': {
+                '0%': { transform: 'scale(0.3)', opacity: '0' },
+                '50%': { transform: 'scale(1.05)', opacity: '1' },
+                '70%': { transform: 'scale(0.9)' },
+                '100%': { transform: 'scale(1)' },
+              },
+              'fade-in-up': {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <script>
+      // --- Website Protection Script ---
+      (function() {
+        // Disable Right Click
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        }, false);
+
+        // Disable Text Selection and Dragging (JS Backup for CSS)
+        document.addEventListener('selectstart', function(e) {
+          // Allow selection in input fields for copy/paste utility
+          if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+             e.preventDefault();
+          }
+        }, false);
+        
+        document.addEventListener('dragstart', function(e) {
+          e.preventDefault();
+        }, false);
+
+        // Copy, Cut, Paste listeners REMOVED to allow clipboard usage
+
+        // Disable Developer Tools Shortcuts
+        document.addEventListener('keydown', function(e) {
+          // F12
+          if (e.key === 'F12' || e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+          }
+
+          // Ctrl+Shift+I (DevTools)
+          if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.keyCode === 73)) {
+            e.preventDefault();
+            return false;
+          }
+
+          // Ctrl+Shift+J (Console)
+          if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j' || e.keyCode === 74)) {
+            e.preventDefault();
+            return false;
+          }
+
+          // Ctrl+Shift+C (Element Inspector)
+          if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c' || e.keyCode === 67)) {
+            e.preventDefault();
+            return false;
+          }
+
+          // Ctrl+U (View Source)
+          if (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.keyCode === 85)) {
+            e.preventDefault();
+            return false;
+          }
+        }, false);
+      })();
+    </script>
+    <style>
+      body {
+        font-family: 'Noto Serif TC', serif;
+        background-color: #8E0000;
+        background-image: url("https://www.transparenttextures.com/patterns/shippo.png");
+        
+        /* Disable Text Selection */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE10+/Edge */
+        user-select: none;         /* Standard */
+      }
+      /* Allow text selection in inputs */
+      input, textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+      .gold-text-shadow {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+      .metallic-gold {
+        background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        color: #fff;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
